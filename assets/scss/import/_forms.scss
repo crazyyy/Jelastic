@@ -54,7 +54,7 @@ select[multiple=multiple] {
   transition: $base-transition;
 
   border: $base-border;
-  border-radius: $base-border-radius;
+  border-radius: 0;
   outline: none;
   background-color: $base-background-color;
   box-shadow: $form-box-shadow;

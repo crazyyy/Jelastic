@@ -20,15 +20,15 @@ button {
   white-space: nowrap;
   text-decoration: none;
 
-  color: #fff;
+  color: #ffffff;
   border: none;
-  border-radius: $base-border-radius;
+  border-radius: 1px;
   background-color: $action-color;
 
   -webkit-font-smoothing: antialiased;
   &:hover,
   &:focus {
-    color: #fff;
+    color: #ffffff;
     background-color: darken($action-color, 15%);
   }
   &:active {

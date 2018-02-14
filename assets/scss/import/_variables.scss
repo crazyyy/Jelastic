@@ -1,7 +1,7 @@
 // Font Sizes
 $base-font-size: 16px;
 $em-base: $base-font-size;
-$base-font-family: 'Roboto Condensed', sans-serif;
+$base-font-family: 'Open Sans', sans-serif;
 $heading-font-family: $base-font-family;
 
 // font weight
@@ -20,8 +20,8 @@ $base-line-height: 1.1;
 $heading-line-height: 1.2;
 
 // Other Sizes
-$width: 980px;
-$footer: 50px;
+$width: 1245px;
+$footer: 424px;
 $footer_margin: $footer - 2 * $footer;
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
@@ -31,28 +31,29 @@ $base-z-index: 0;
 // Colors
 $orange: orange;
 $red: red;
-$blue: #477dca;
-$gray-medium: #999;
-$gray-dark: #333;
-$gray-light: #ddd;
+$blue: #1070c4;
+$blue-light: #0a88f7;
+$gray-medium: #252525;
+$gray-dark: #787878;
+$gray-light: #dddddd;
 
 // Font Colors
 $base-font-color: $gray-dark;
-$action-color: $blue;
+$action-color: $blue-light;
 
 // Border
 $base-border-color: $gray-light;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$base-background-color: #fff;
+$base-background-color: #ffffff;
 $secondary-background-color: tint($base-border-color, 75%);
 
 // Box Shadows
-$base-box-shadow: 0 1px 3px rgba(#000, .06);
+$base-box-shadow: 0 1px 3px rgba(#000000, .06);
 
 // Forms
-$form-box-shadow: inset 0 1px 3px rgba(#000, .06);
+$form-box-shadow: inset 0 1px 3px rgba(#000000, .06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -.3);
 
 // Animations
