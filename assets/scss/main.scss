@@ -501,13 +501,14 @@ aside {
         left: 0;
       }
       a {
-        color: #0088fb;
+        text-decoration: none;
 
-        td: none;
+        color: #0088fb;
       }
     }
-    button {
+    input[type=submit] {
       display: inline-block;
+font-weight: normal;
 
       height: 51px;
       margin: 0 auto;
@@ -784,6 +785,53 @@ footer {
         margin-right: 20px;
       }
     }
+  }
+}
+
+#gform_fields_1 {
+  #field_1_2,
+  #field_1_3,
+  #field_1_4,
+  #field_1_5 {
+    label {
+      display: none;
+    }
+  }
+  select {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+  }
+  .gchoice_1_8_1,
+  .gchoice_1_9_1 {
+    font-size: 12px;
+    font-style: italic;
+
+    position: relative;
+
+    margin-bottom: 14px;
+    padding-left: 20px;
+
+    text-align: left;
+
+    color: #252525;
+    label {
+      padding: 0;
+      margin: 0;
+    }
+    input {
+      position: absolute;
+      top: 2px;
+      left: 0;
+    }
+    a {
+      text-decoration: none;
+
+      color: #0088fb;
+    }
+  }
+  .gfield_visibility_hidden {
+    display: none;
   }
 }
 

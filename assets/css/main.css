@@ -1287,12 +1287,13 @@ aside .widget--title {
 }
 
 .widget form label a {
+  text-decoration: none;
   color: #0088fb;
-  td: none;
 }
 
-.widget form button {
+.widget form input[type=submit] {
   display: inline-block;
+  font-weight: normal;
   height: 51px;
   margin: 0 auto;
   padding: 18px 38px;
@@ -1300,11 +1301,11 @@ aside .widget--title {
   background-color: #0099fd;
 }
 
-.widget form button:hover {
+.widget form input[type=submit]:hover {
   background-color: #31aeff;
 }
 
-.widget form button.disabled {
+.widget form input[type=submit].disabled {
   background-color: #80d6ff;
 }
 
@@ -1555,6 +1556,53 @@ footer > .container {
 
 .footer-wiget--right .footer-terms a:nth-child(1) {
   margin-right: 20px;
+}
+
+#gform_fields_1 #field_1_2 label,
+#gform_fields_1 #field_1_3 label,
+#gform_fields_1 #field_1_4 label,
+#gform_fields_1 #field_1_5 label {
+  display: none;
+}
+
+#gform_fields_1 select {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}
+
+#gform_fields_1 .gchoice_1_8_1,
+#gform_fields_1 .gchoice_1_9_1 {
+  font-size: 12px;
+  font-style: italic;
+  position: relative;
+  margin-bottom: 14px;
+  padding-left: 20px;
+  text-align: left;
+  color: #252525;
+}
+
+#gform_fields_1 .gchoice_1_8_1 label,
+#gform_fields_1 .gchoice_1_9_1 label {
+  padding: 0;
+  margin: 0;
+}
+
+#gform_fields_1 .gchoice_1_8_1 input,
+#gform_fields_1 .gchoice_1_9_1 input {
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+#gform_fields_1 .gchoice_1_8_1 a,
+#gform_fields_1 .gchoice_1_9_1 a {
+  text-decoration: none;
+  color: #0088fb;
+}
+
+#gform_fields_1 .gfield_visibility_hidden {
+  display: none;
 }
 
 @media (max-width: 1240px) {

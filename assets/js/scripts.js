@@ -58,22 +58,65 @@ $(window).scroll(function() {
 });
 
 jQuery(document).ready(function($) {
-  $('.widget--getyourappliance button').on('click', function(e) {
+
+  $('#gform_submit_button_1').addClass('disabled');
+  $(".gchoice_1_8_1 input").prop("checked", false);
+  $(".gchoice_1_9_1 input").prop("checked", false);
+
+  $('.gform_body select').wrap('<span class="form-select"></span>');
+
+  $('.widget--getyourappliance #gform_submit_button_1').live('click', function(e) {
     if ($(this).hasClass('disabled')) {
       e.preventDefault();
       $(this).parent().parent().append('<p class="error">please read and agree Terms and confirm allow using your pesonal data ... </p>')
     } else {
       $('.widget--getyourappliance .error').hide('fast');
+      $("#gform_1").submit();
     }
   })
-  $('.widget--getyourappliance input[type=checkbox]').on('click', function(e) {
-    if ($('.checkbox1').is(':checked') && $('.checkbox2').is(':checked')) {
-      $('.widget--getyourappliance button').removeClass('disabled')
+  $('.widget--getyourappliance input[type=checkbox]').live('click', function(e) {
+    if ($('.gchoice_1_8_1 input').is(':checked') && $('.gchoice_1_9_1 input').is(':checked')) {
+      $('.widget--getyourappliance #gform_submit_button_1').removeClass('disabled');
+      $('.widget--getyourappliance .error').hide('fast');
     } else {
-      $('.widget--getyourappliance button').addClass('disabled')
+      $('.widget--getyourappliance #gform_submit_button_1').addClass('disabled')
     }
   })
+
+
+
+  UserInfo.getInfo(function(data) {
+    // the "data" object contains the info
+
+    $('#input_1_11').val(data.country.name);
+
+    if (data.continent.code = "EU") {
+      var currentEUR = GetLatestCurrency();
+      ChangePrices(currentEUR);
+    }
+  }, function(err) {
+    // the "err" object contains useful information in case of an error
+    console.warn(err);
+  });
+
 });
+
+function GetLatestCurrency() {
+  var userID = '635fd3cbaa4e486596dc97a868812032';
+  var url = 'https://openexchangerates.org/api/latest.json?app_id=' + userID;
+
+  var exchangerate = null;
+
+  $.ajax({
+    'async': false,
+    url: url,
+    success: function(result) {
+      exchangerate = result.rates.EUR;
+    }
+
+  });
+  return exchangerate;
+}
 
 
 function FixedSidebar() {
@@ -89,7 +132,6 @@ function FixedSidebar() {
 
     var breakpoint = documentHeight - footerHeight - fixedWidgetHeight;
 
-
     if (($(window).scrollTop() > elementPosition.top) && ($(window).scrollTop() < breakpoint)) {
       $('.widget--getyourappliance').addClass('widget-fixed');
     } else {
@@ -104,4 +146,21 @@ function SetWidgetSize() {
   $('.widget').each(function(index, el) {
     $(this).width(sidebarWidth)
   });
+}
+
+function ChangePrices(exchangerate) {
+
+  $('.table-item--price').each(function(index, el) {
+    var cosntInUSD = $(this).attr('data-cost');
+    var constInEUR = parseInt(cosntInUSD * exchangerate);
+    var currentHTML = $(this).html();
+    var newHTML = currentHTML.replace("$", "€").replace(cosntInUSD, constInEUR);
+    $(this).html(newHTML);
+
+    var selectOptionValue = '$' + cosntInUSD + ' server/month';
+    var selector = 'option[value="' + selectOptionValue + '"]';
+    var newSelectOptionValue = selectOptionValue.replace("$", "€").replace(cosntInUSD, constInEUR);
+    $(selector).attr('value', newSelectOptionValue).html(newSelectOptionValue)
+  });
+
 }
