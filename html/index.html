@@ -29,7 +29,7 @@
   <header role="banner">
     <div class="container">
 
-      <nav class="header--nav col-md-12" role="navigation">
+      <nav class="header--nav" role="navigation">
         <ul class="headnav">
           <li class="has-child"><a href="#">product</a></li>
           <li class="has-child"><a href="#">advantages</a></li>
@@ -86,9 +86,6 @@
                   <li>10TB Transfer</li>
                 </ul>
               </div><!-- /.table-item--descr -->
-              <div class="table-item--additional">
-                <p>Jelastic Private PaaS Licence with 24/7 Support</p>
-              </div>
             </div><!-- /.price--table_item -->
 
             <div class="price--table_item">
@@ -107,9 +104,6 @@
                   <li>10TB Transfer</li>
                 </ul>
               </div><!-- /.table-item--descr -->
-              <div class="table-item--additional">
-                <p>Jelastic Private PaaS Licence with 24/7 Support</p>
-              </div>
             </div><!-- /.price--table_item -->
 
             <div class="price--table_item">
@@ -128,9 +122,6 @@
                   <li>10TB Transfer</li>
                 </ul>
               </div><!-- /.table-item--descr -->
-              <div class="table-item--additional">
-                <p>Jelastic Private PaaS Licence with 24/7 Support</p>
-              </div>
             </div><!-- /.price--table_item -->
 
           </div><!-- /.price--table -->
@@ -139,13 +130,12 @@
       </article>
 
       <aside class="sidebar" role="complementary">
-        <div class="widget widget--getyourappliance ">
+        <div class="widget widget--getyourappliance">
           <span class="widget--title">Get Your Appliance</span>
           <form action="">
             <input type="text" placeholder="Name*">
             <input type="email" placeholder="Email*">
             <input type="text" placeholder="Company*">
-
             <span class="form-select">
               <select name="" id="">
                 <option disabled="disabled" selected="selected" value="">Type</option>
@@ -154,9 +144,13 @@
                 <option>$864 server/month</option>
               </select>
             </span>
-            <label><input type="checkbox" checked> I read and agree to <a href="#">Jelastic Terms of Use</a></label>
-            <label><input type="checkbox" checked> I confirm being of legal age, allow using my personal data and agree to <a href="#">Privacy Policy</a></label>
-            <button>Get Started</button>
+            <label>
+              <input type="checkbox" class="checkbox1"> I read and agree to <a href="#">Jelastic Terms of Use</a>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox2"> I confirm being of legal age, allow using my personal data and agree to <a href="#">Privacy Policy</a>
+            </label>
+            <button class="disabled">Get Started</button>
           </form>
         </div><!-- widget -->
       </aside><!-- /sidebar -->
