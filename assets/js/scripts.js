@@ -84,7 +84,6 @@ jQuery(document).ready(function($) {
   })
 
 
-
   UserInfo.getInfo(function(data) {
     // the "data" object contains the info
 
@@ -99,6 +98,9 @@ jQuery(document).ready(function($) {
     console.warn(err);
   });
 
+  var saUTMs = getJsonFromUrl();
+  var UTMtxt = JSON.stringify(saUTMs, null, 4).replace('{','').replace('}','');
+  $('#input_1_12').val(UTMtxt);
 });
 
 function GetLatestCurrency() {
@@ -163,4 +165,15 @@ function ChangePrices(exchangerate) {
     $(selector).attr('value', newSelectOptionValue).html(newSelectOptionValue)
   });
 
+}
+
+function getJsonFromUrl() {
+  var query = location.search.substr(1);
+  var result = {};
+  query.split("&").forEach(function(part) {
+    var item = part.split("=");
+    result[item[0]] = decodeURIComponent(item[1]);
+  });
+
+  return result;
 }

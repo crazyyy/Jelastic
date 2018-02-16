@@ -1203,10 +1203,12 @@ aside {
 }
 
 aside .widget--title {
-  font-size: 22px;
+  font-size: 27px;
+  font-weight: 300;
   display: block;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
   text-align: center;
+  letter-spacing: 1px;
   color: #0cb0ff;
 }
 
@@ -1292,8 +1294,8 @@ aside .widget--title {
 }
 
 .widget form input[type=submit] {
-  display: inline-block;
   font-weight: normal;
+  display: inline-block;
   height: 51px;
   margin: 0 auto;
   padding: 18px 38px;
@@ -1566,9 +1568,9 @@ footer > .container {
 }
 
 #gform_fields_1 select {
+  margin-bottom: 10px;
   padding-top: 0;
   padding-bottom: 0;
-  margin-bottom: 10px;
 }
 
 #gform_fields_1 .gchoice_1_8_1,
@@ -1576,7 +1578,7 @@ footer > .container {
   font-size: 12px;
   font-style: italic;
   position: relative;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   padding-left: 20px;
   text-align: left;
   color: #252525;
@@ -1584,8 +1586,8 @@ footer > .container {
 
 #gform_fields_1 .gchoice_1_8_1 label,
 #gform_fields_1 .gchoice_1_9_1 label {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 #gform_fields_1 .gchoice_1_8_1 input,
@@ -1599,6 +1601,10 @@ footer > .container {
 #gform_fields_1 .gchoice_1_9_1 a {
   text-decoration: none;
   color: #0088fb;
+}
+
+#gform_fields_1 .gchoice_1_9_1 {
+  margin-bottom: 24px;
 }
 
 #gform_fields_1 .gfield_visibility_hidden {

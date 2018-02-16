@@ -432,13 +432,15 @@ aside {
 
   width: 294px;
   .widget--title {
-    font-size: 22px;
+    font-size: 27px;
+    font-weight: 300;
 
     display: block;
 
-    margin-bottom: 34px;
+    margin-bottom: 30px;
 
     text-align: center;
+    letter-spacing: 1px;
 
     color: #0cb0ff;
   }
@@ -507,8 +509,9 @@ aside {
       }
     }
     input[type=submit] {
+      font-weight: normal;
+
       display: inline-block;
-font-weight: normal;
 
       height: 51px;
       margin: 0 auto;
@@ -798,9 +801,9 @@ footer {
     }
   }
   select {
+    margin-bottom: 10px;
     padding-top: 0;
     padding-bottom: 0;
-    margin-bottom: 10px;
   }
   .gchoice_1_8_1,
   .gchoice_1_9_1 {
@@ -809,15 +812,16 @@ footer {
 
     position: relative;
 
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     padding-left: 20px;
 
     text-align: left;
 
     color: #252525;
     label {
-      padding: 0;
+
       margin: 0;
+      padding: 0;
     }
     input {
       position: absolute;
@@ -829,6 +833,9 @@ footer {
 
       color: #0088fb;
     }
+  }
+  .gchoice_1_9_1 {
+    margin-bottom: 24px;
   }
   .gfield_visibility_hidden {
     display: none;
